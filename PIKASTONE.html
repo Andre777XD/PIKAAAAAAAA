@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIKASTONE - Página Oficial</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #023e8a;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PIKASTONE - Geociencias</h1>
+    <p>Explorando el mundo a través de la geología y la cartografía</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#quienes-somos">Quiénes somos</a>
+    <a href="#mapa">Mapa</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<main>
+    <section id="inicio">
+        <h2>Bienvenidos</h2>
+        <p>Somos un grupo dedicado a la ver lo bonito de las ciencias de la Tierra. En esta página compartimos nuestros proyectos y mapas interactivos.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mountain_Range.jpg" alt="Foto de montaña">
+    </section>
+
+    <section id="quienes-somos">
+        <h2>Quiénes somos</h2>
+        <p>Nuestro grupo está conformado por estudiantes y profesionales apasionados por la geología, la geografía y la cartografía. Realizamos salidas de campo, análisis de laboratorio y desarrollo de mapas temáticos.</p>
+    </section>
+
+    <section id="mapa">
+        <h2>Mapa Interactivo</h2>
+        <div id="map"></div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes escribirnos a: <strong>geogrupo@example.com</strong></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 PIKASTONE: TACNA - Todos los derechos reservados</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    // Crear mapa base
+    var map = L.map('map').setView([-18.0066, -70.2463], 12);
+
+    // Capa base OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+</script>
+
+</body>
+</html>
